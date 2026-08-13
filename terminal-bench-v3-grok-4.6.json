@@ -761,17 +761,5 @@
       "exception": "RuntimeError",
       "source": "grok46-tb3-errors2"
     }
-  ],
-  "cost": {
-    "usd_per_task": 3.31,
-    "mean_fresh_tokens": 289219.7,
-    "mean_cache_tokens": 4627431.2,
-    "mean_output_tokens": 68902.9,
-    "pricing": {
-      "input_usd_per_mtok": 2.0,
-      "cached_input_usd_per_mtok": 0.5,
-      "output_usd_per_mtok": 6.0,
-      "source": "https://docs.x.ai/developers/pricing"
-    }
-  }
+  ]
 }

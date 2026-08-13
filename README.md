@@ -8,8 +8,6 @@ Independent DeepSWE v1.1 and Terminal-Bench v3.0 runs of **Grok 4.6 High**, chec
 
 ![Terminal-Bench v3.0 — Grok 4.6 High](terminal-bench-v3.png)
 
-![Terminal-Bench v3.0 — cost per task](terminal-bench-v3-cost.png)
-
 ## DeepSWE v1.1
 
 xAI lists **65.9%**. This re-run: **64.6%** (73/113).
@@ -36,7 +34,7 @@ xAI lists **26%**. This re-run: **15.9%** (10/63 graded; Coq 4h timeout counted 
 | Grok 4.6 High (this run) | 15.9% |
 | Grok 4.5 High | 15.7% |
 
-Comparator rows are the xAI card on Terminal-Bench v3.0. JSON: `terminal-bench-v3-grok-4.6.json`.
+Comparator rows are the xAI card on Terminal-Bench v3.0. JSON: `terminal-bench-v3-grok-4.6.json`. No TB cost card: mean dollars per task is not comparable when most tasks fail.
 
 ## Method
 
