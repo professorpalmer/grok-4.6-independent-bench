@@ -6,17 +6,17 @@
   "environment": "docker",
   "n_tasks": 113,
   "score": {
-    "n_graded": 110,
-    "n_pass": 72,
-    "n_fail": 38,
+    "n_graded": 113,
+    "n_pass": 73,
+    "n_fail": 40,
     "n_in_flight": 0,
-    "n_unresolved_infra": 3,
-    "pass_rate": 0.6545
+    "n_unresolved_infra": 0,
+    "pass_rate": 0.646
   },
   "efficiency": {
-    "mean_output_tokens": 63566.8,
-    "mean_agent_steps": 57.4,
-    "mean_input_tokens": 6448241.2
+    "mean_output_tokens": 63711.0,
+    "mean_agent_steps": 57.7,
+    "mean_input_tokens": 6487392.6
   },
   "comparators": {
     "note": "Datacurve DeepSWE v1.1 board (mini-swe-agent), Aug 2026 snapshot",
@@ -76,11 +76,11 @@
       "n_errored_trials": 23
     },
     "infra_n21": {
-      "n_input_tokens": 149368574,
-      "n_cache_tokens": 144497408,
-      "n_output_tokens": 1208615,
-      "finished_at": null,
-      "n_completed_trials": 18,
+      "n_input_tokens": 173098249,
+      "n_cache_tokens": 167605760,
+      "n_output_tokens": 1415470,
+      "finished_at": "2026-08-12T23:45:53.096789",
+      "n_completed_trials": 21,
       "n_errored_trials": 0
     }
   },
@@ -309,6 +309,21 @@
       "n_agent_steps": 51,
       "task": "cattrs-partial-structuring-recovery",
       "source": "wave_main"
+    },
+    {
+      "status": "graded",
+      "task_prefix": "clack-async-autocomplete-options",
+      "reward": 1,
+      "f2p_passed": 82,
+      "f2p_total": 82,
+      "p2p_passed": 643,
+      "p2p_total": 643,
+      "n_input_tokens": 6750827,
+      "n_cache_tokens": 6586240,
+      "n_output_tokens": 81737,
+      "n_agent_steps": 60,
+      "task": "clack-async-autocomplete-options",
+      "source": "wave_infra"
     },
     {
       "status": "graded",
@@ -987,6 +1002,21 @@
     },
     {
       "status": "graded",
+      "task_prefix": "meriyah-explicit-resource-declar",
+      "reward": 0,
+      "f2p_passed": 45,
+      "f2p_total": 49,
+      "p2p_passed": 51469,
+      "p2p_total": 51469,
+      "n_input_tokens": 11204326,
+      "n_cache_tokens": 10990208,
+      "n_output_tokens": 64140,
+      "n_agent_steps": 81,
+      "task": "meriyah-explicit-resource-declarations",
+      "source": "wave_infra"
+    },
+    {
+      "status": "graded",
       "task_prefix": "mnamer-daemon-watch-lifecycle",
       "reward": 1,
       "f2p_passed": 51,
@@ -1542,6 +1572,21 @@
     },
     {
       "status": "graded",
+      "task_prefix": "textual-kitty-key-phases",
+      "reward": 0,
+      "f2p_passed": 22,
+      "f2p_total": 23,
+      "p2p_passed": 57,
+      "p2p_total": 57,
+      "n_input_tokens": 5774522,
+      "n_cache_tokens": 5531904,
+      "n_output_tokens": 60978,
+      "n_agent_steps": 60,
+      "task": "textual-kitty-key-phases",
+      "source": "wave_infra"
+    },
+    {
+      "status": "graded",
       "task_prefix": "textual-richlog-follow-state",
       "reward": 1,
       "f2p_passed": 20,
@@ -1737,25 +1782,12 @@
     }
   ],
   "in_flight": [],
-  "unresolved_infra": [
-    {
-      "task": "textual-kitty-key-phases",
-      "exception": "RuntimeError"
-    },
-    {
-      "task": "clack-async-autocomplete-options",
-      "exception": "EnvironmentStartTimeoutError"
-    },
-    {
-      "task": "meriyah-explicit-resource-declarations",
-      "exception": "EnvironmentStartTimeoutError"
-    }
-  ],
+  "unresolved_infra": [],
   "cost": {
-    "usd_per_task": 3.94,
-    "mean_fresh_tokens": 223416.9,
-    "mean_cache_tokens": 6224824.4,
-    "mean_output_tokens": 63566.8,
+    "usd_per_task": 3.96,
+    "mean_fresh_tokens": 222980.0,
+    "mean_cache_tokens": 6264412.6,
+    "mean_output_tokens": 63711.0,
     "pricing": {
       "input_usd_per_mtok": 2.0,
       "cached_input_usd_per_mtok": 0.5,

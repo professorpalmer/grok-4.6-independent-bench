@@ -1,19 +1,27 @@
 {
   "benchmarks": ["DeepSWE v1.1", "Terminal-Bench v3.0"],
   "model": "Grok 4.6 High",
-  "date": "2026-08-12",
+  "date": "2026-08-13",
   "claim_source": "https://x.ai/news/grok-4-6",
+  "do_not_copy_into_puppetmaster_registry": true,
   "deepswe": {
     "claimed_pass_rate": 0.659,
+    "this_run_pass_rate": 0.646,
+    "n_pass": 73,
+    "n_graded": 113,
+    "usd_per_task_list": 3.96,
     "framework": "pier==0.3.1",
-    "environment": "docker",
-    "n_tasks": 113
+    "environment": "docker"
   },
   "terminal_bench": {
     "claimed_pass_rate": 0.26,
-    "dataset": "terminal-bench/terminal-bench@latest",
+    "this_run_pass_rate": 0.1587,
+    "n_pass": 10,
+    "n_graded": 63,
+    "coq_timeout_counted_fail": true,
+    "n_gpu_excluded": 4,
     "framework": "harbor",
     "environment": "docker",
-    "n_tasks": 74
+    "dataset": "harbor-framework/terminal-bench@v3.0.0"
   }
 }

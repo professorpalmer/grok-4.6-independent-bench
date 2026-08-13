@@ -7,6 +7,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 ROOT = Path(__file__).resolve().parent
 JSON_PATH = ROOT / "deepswe-v1.1-grok-4.6.json"
+TB_JSON = ROOT / "terminal-bench-v3-grok-4.6.json"
 
 W, H = 1400, 820
 BG = (14, 18, 16)
@@ -138,8 +139,9 @@ def draw_pass(data: dict) -> None:
     )
     d.text(
         (64, H - 58),
+        "All bars are DeepSWE v1.1. "
         f"{MODEL} is this independent Pier/Docker run. "
-        "Other bars are Datacurve board scores (mini-swe-agent). "
+        "Sol / Fable / Grok 4.5 High are Datacurve board scores. "
         "xAI card lists Grok 4.6 High at 65.9%.",
         font=font(15),
         fill=MUTED,
@@ -179,12 +181,89 @@ def draw_cost(data: dict, cost: dict) -> None:
     )
     d.text(
         (64, H - 58),
-        f"{MODEL} is xAI list on this run ($2 / $0.50 cache / $6 per MTok). "
-        "Other bars are Datacurve billed USD. Output tokens rose vs Grok 4.5 High.",
+        f"All bars are DeepSWE v1.1 cost/task. {MODEL} is xAI list on this run "
+        "($2 / $0.50 cache / $6 per MTok). Sol / Fable / Grok 4.5 High are Datacurve billed USD.",
         font=font(15),
         fill=MUTED,
     )
     out = ROOT / "deepswe-v1.1-cost.png"
+    img.save(out, "PNG")
+    print("wrote", out)
+
+
+def draw_tb_pass(data: dict) -> None:
+    score = data["score"]
+    ours = float(score["pass_rate"])
+    n = int(score["n_graded"])
+    n_pass = int(score["n_pass"])
+    universe = int(data["n_tasks"])
+    img = Image.new("RGB", (W, H), BG)
+    d = ImageDraw.Draw(img)
+    paint_header(d, "TERMINAL-BENCH v3.0", "Independent re-run")
+    d.text((64, 168), fmt_pct(ours), font=font(112, bold=True), fill=INK)
+    d.text((64, 292), MODEL, font=font(28, bold=True), fill=LIME)
+    n_note = f"{n_pass}/{n} pass" + ("" if n == universe else f"  ·  {n} of {universe} CPU tasks")
+    d.text((64, 338), n_note, font=font(16), fill=MUTED)
+    d.line((64, 392, W - 64, 392), fill=RULE, width=1)
+    paint_bars(
+        d,
+        [
+            ("GPT-5.6 Sol Max", 0.346, False),
+            ("Fable 5 Max", 0.341, False),
+            (MODEL, ours, True),
+            ("Grok 4.5 High", 0.157, False),
+        ],
+        fmt_pct,
+        0.40,
+    )
+    d.text(
+        (64, H - 58),
+        "All bars are Terminal-Bench v3.0. "
+        f"{MODEL} is this run (Coq 4h timeout = fail). "
+        "Sol / Fable / Grok 4.5 High are the xAI card on the same test (card lists 4.6 High at 26%).",
+        font=font(15),
+        fill=MUTED,
+    )
+    out = ROOT / "terminal-bench-v3.png"
+    img.save(out, "PNG")
+    print("wrote", out)
+
+
+def draw_tb_cost(data: dict, cost: dict) -> None:
+    ours = float(cost["usd_per_task"])
+    img = Image.new("RGB", (W, H), BG)
+    d = ImageDraw.Draw(img)
+    paint_header(d, "TERMINAL-BENCH v3.0", "Cost per task")
+    d.text((64, 168), fmt_usd(ours), font=font(112, bold=True), fill=INK)
+    d.text((64, 292), MODEL, font=font(28, bold=True), fill=LIME)
+    out_k = (cost.get("mean_output_tokens") or 0) / 1000
+    d.text(
+        (64, 338),
+        f"xAI list on this run  ·  {out_k:.0f}k mean output tokens",
+        font=font(16),
+        fill=MUTED,
+    )
+    d.line((64, 392, W - 64, 392), fill=RULE, width=1)
+    paint_bars(
+        d,
+        [
+            ("Fable 5 Max", 87.84, False),
+            ("GPT-5.6 Sol Max", 54.05, False),
+            (MODEL, ours, True),
+            ("Grok 4.5 High", 10.35, False),
+        ],
+        fmt_usd,
+        100.0,
+    )
+    d.text(
+        (64, H - 58),
+        "All bars are Terminal-Bench v3.0 cost/task. "
+        f"{MODEL} is xAI list ($2 / $0.50 cache / $6 per MTok) on this run. "
+        "Sol / Fable / Grok 4.5 High are Snorkel TB 3.0 board totals / 74 tasks.",
+        font=font(15),
+        fill=MUTED,
+    )
+    out = ROOT / "terminal-bench-v3-cost.png"
     img.save(out, "PNG")
     print("wrote", out)
 
@@ -197,6 +276,14 @@ def main() -> None:
     JSON_PATH.write_text(json.dumps(data, indent=2) + "\n")
     draw_pass(data)
     draw_cost(data, cost)
+    if TB_JSON.exists():
+        tb = json.loads(TB_JSON.read_text())
+        tb["model"] = MODEL
+        tb_cost = our_cost(tb)
+        tb["cost"] = tb_cost
+        TB_JSON.write_text(json.dumps(tb, indent=2) + "\n")
+        draw_tb_pass(tb)
+        draw_tb_cost(tb, tb_cost)
 
 
 if __name__ == "__main__":

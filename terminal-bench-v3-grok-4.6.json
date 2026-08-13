@@ -1,0 +1,777 @@
+{
+  "benchmark": "Terminal-Bench v3.0",
+  "model": "Grok 4.6 High",
+  "date": "2026-08-13",
+  "framework": "harbor",
+  "environment": "docker",
+  "n_tasks": 70,
+  "n_gpu_excluded": 4,
+  "score": {
+    "n_graded": 63,
+    "n_pass": 10,
+    "n_fail": 53,
+    "n_unresolved_infra": 7,
+    "pass_rate": 0.1587
+  },
+  "efficiency": {
+    "mean_output_tokens": 68902.9,
+    "mean_agent_steps": null,
+    "mean_input_tokens": 4916651.0
+  },
+  "comparators": {
+    "note": "Same test: Terminal-Bench v3.0 from the xAI 2026-08-12 card",
+    "gpt-5.6-sol-max": {
+      "pass": 0.346
+    },
+    "claude-fable-5-max": {
+      "pass": 0.341
+    },
+    "xai_card_grok-4.6-high": {
+      "pass": 0.26,
+      "source": "https://x.ai/news/grok-4-6"
+    },
+    "grok-4.5-high": {
+      "pass": 0.157
+    }
+  },
+  "tasks": [
+    {
+      "status": "graded",
+      "task": "atrx-vep-crispr",
+      "reward": 0,
+      "reward_raw": 0.0,
+      "n_input_tokens": 2043403,
+      "n_cache_tokens": 1703168,
+      "n_output_tokens": 63101,
+      "n_agent_steps": null,
+      "source": "grok46-tb3-slash"
+    },
+    {
+      "status": "graded",
+      "task": "biped-contact-dynamics",
+      "reward": 0,
+      "reward_raw": 0.0,
+      "n_input_tokens": 8512706,
+      "n_cache_tokens": 8118528,
+      "n_output_tokens": 119761,
+      "n_agent_steps": null,
+      "source": "grok46-tb3-slash"
+    },
+    {
+      "status": "graded",
+      "task": "bun-sourcemap-leak",
+      "reward": 0,
+      "reward_raw": 0.0,
+      "n_input_tokens": 363719,
+      "n_cache_tokens": 309632,
+      "n_output_tokens": 19644,
+      "n_agent_steps": null,
+      "source": "grok46-tb3-slash"
+    },
+    {
+      "status": "graded",
+      "task": "cargo-flight-dispatch",
+      "reward": 0,
+      "reward_raw": 0.0,
+      "n_input_tokens": 586584,
+      "n_cache_tokens": 348288,
+      "n_output_tokens": 45542,
+      "n_agent_steps": null,
+      "source": "grok46-tb3-slash"
+    },
+    {
+      "status": "graded",
+      "task": "cli-2ph-simplex",
+      "reward": 0,
+      "reward_raw": 0.0,
+      "n_input_tokens": 1518980,
+      "n_cache_tokens": 1258752,
+      "n_output_tokens": 62987,
+      "n_agent_steps": null,
+      "source": "grok46-tb3-slash"
+    },
+    {
+      "status": "graded",
+      "task": "coq-block-bound",
+      "reward": 0,
+      "reward_raw": 0,
+      "source": "agent_timeout_counted_fail"
+    },
+    {
+      "status": "graded",
+      "task": "ctr-optimization",
+      "reward": 0,
+      "reward_raw": 0.0,
+      "n_input_tokens": 948225,
+      "n_cache_tokens": 812800,
+      "n_output_tokens": 2963,
+      "n_agent_steps": null,
+      "source": "grok46-tb3-slash"
+    },
+    {
+      "status": "graded",
+      "task": "data-anonymization",
+      "reward": 0,
+      "reward_raw": 0.0,
+      "n_input_tokens": 1672822,
+      "n_cache_tokens": 1512064,
+      "n_output_tokens": 50016,
+      "n_agent_steps": null,
+      "source": "grok46-tb3-slash"
+    },
+    {
+      "status": "graded",
+      "task": "distributed-dedup",
+      "reward": 0,
+      "reward_raw": 0.0,
+      "n_input_tokens": 1764506,
+      "n_cache_tokens": 1452800,
+      "n_output_tokens": 61488,
+      "n_agent_steps": null,
+      "source": "grok46-tb3-slash"
+    },
+    {
+      "status": "graded",
+      "task": "embedding-drift-monitor",
+      "reward": 0,
+      "reward_raw": 0.0,
+      "n_input_tokens": 867615,
+      "n_cache_tokens": 566400,
+      "n_output_tokens": 42043,
+      "n_agent_steps": null,
+      "source": "grok46-tb3-slash"
+    },
+    {
+      "status": "graded",
+      "task": "erp-procurement-planning",
+      "reward": 0,
+      "reward_raw": 0.9969,
+      "n_input_tokens": 1301607,
+      "n_cache_tokens": 1058048,
+      "n_output_tokens": 41306,
+      "n_agent_steps": null,
+      "source": "grok46-tb3-slash"
+    },
+    {
+      "status": "graded",
+      "task": "fin-saccr-rwa",
+      "reward": 1,
+      "reward_raw": 1.0,
+      "n_input_tokens": 2184772,
+      "n_cache_tokens": 1945728,
+      "n_output_tokens": 72397,
+      "n_agent_steps": null,
+      "source": "grok46-tb3-slash"
+    },
+    {
+      "status": "graded",
+      "task": "fix-uautomizer-soundness",
+      "reward": 0,
+      "reward_raw": 0.0,
+      "n_input_tokens": 6383760,
+      "n_cache_tokens": 5920000,
+      "n_output_tokens": 38793,
+      "n_agent_steps": null,
+      "source": "grok46-tb3-slash"
+    },
+    {
+      "status": "graded",
+      "task": "foodstuff-beta-activity",
+      "reward": 0,
+      "reward_raw": 0.0,
+      "n_input_tokens": 389279,
+      "n_cache_tokens": 340736,
+      "n_output_tokens": 26565,
+      "n_agent_steps": null,
+      "source": "grok46-tb3-slash"
+    },
+    {
+      "status": "graded",
+      "task": "formal-crypto",
+      "reward": 0,
+      "reward_raw": 0.0,
+      "n_input_tokens": 14061,
+      "n_cache_tokens": 6016,
+      "n_output_tokens": 854,
+      "n_agent_steps": null,
+      "source": "grok46-tb3-slash"
+    },
+    {
+      "status": "graded",
+      "task": "freecad-impeller",
+      "reward": 0,
+      "reward_raw": 0.0,
+      "n_input_tokens": 2821158,
+      "n_cache_tokens": 2188928,
+      "n_output_tokens": 110671,
+      "n_agent_steps": null,
+      "source": "grok46-tb3-slash"
+    },
+    {
+      "status": "graded",
+      "task": "freecad-platform-drawing",
+      "reward": 0,
+      "reward_raw": 0.0,
+      "n_input_tokens": 4517249,
+      "n_cache_tokens": 4352576,
+      "n_output_tokens": 74169,
+      "n_agent_steps": null,
+      "source": "grok46-tb3-slash"
+    },
+    {
+      "status": "graded",
+      "task": "freecad-spring-clip",
+      "reward": 0,
+      "reward_raw": 0.0,
+      "n_input_tokens": 7342383,
+      "n_cache_tokens": 6925056,
+      "n_output_tokens": 119296,
+      "n_agent_steps": null,
+      "source": "grok46-tb3-slash"
+    },
+    {
+      "status": "graded",
+      "task": "freight-dispatch-shift",
+      "reward": 0,
+      "reward_raw": 0.0,
+      "n_input_tokens": 3182801,
+      "n_cache_tokens": 2906752,
+      "n_output_tokens": 80947,
+      "n_agent_steps": null,
+      "source": "grok46-tb3-slash"
+    },
+    {
+      "status": "graded",
+      "task": "glycan-ms2-elucidation",
+      "reward": 0,
+      "reward_raw": 0.0,
+      "n_input_tokens": 396983,
+      "n_cache_tokens": 346368,
+      "n_output_tokens": 34230,
+      "n_agent_steps": null,
+      "source": "grok46-tb3-slash"
+    },
+    {
+      "status": "graded",
+      "task": "gpt2-codegolf",
+      "reward": 0,
+      "reward_raw": 0.0,
+      "n_input_tokens": 0,
+      "n_cache_tokens": 0,
+      "n_output_tokens": 0,
+      "n_agent_steps": null,
+      "source": "grok46-tb3-errors2"
+    },
+    {
+      "status": "graded",
+      "task": "gsea-proteomics",
+      "reward": 0,
+      "reward_raw": 0.0,
+      "n_input_tokens": 1036640,
+      "n_cache_tokens": 976576,
+      "n_output_tokens": 17166,
+      "n_agent_steps": null,
+      "source": "grok46-tb3-slash"
+    },
+    {
+      "status": "graded",
+      "task": "heat-pump-warranty",
+      "reward": 0,
+      "reward_raw": 0.0,
+      "n_input_tokens": 2395783,
+      "n_cache_tokens": 1835008,
+      "n_output_tokens": 50478,
+      "n_agent_steps": null,
+      "source": "grok46-tb3-slash"
+    },
+    {
+      "status": "graded",
+      "task": "hof-topology-interpenetration",
+      "reward": 0,
+      "reward_raw": 0.0,
+      "n_input_tokens": 3229341,
+      "n_cache_tokens": 2948224,
+      "n_output_tokens": 73835,
+      "n_agent_steps": null,
+      "source": "grok46-tb3-slash"
+    },
+    {
+      "status": "graded",
+      "task": "html-js-filter",
+      "reward": 0,
+      "reward_raw": 0.0,
+      "n_input_tokens": 1342602,
+      "n_cache_tokens": 1193344,
+      "n_output_tokens": 47283,
+      "n_agent_steps": null,
+      "source": "grok46-tb3-slash"
+    },
+    {
+      "status": "graded",
+      "task": "ico-path-patch",
+      "reward": 0,
+      "reward_raw": 0.0,
+      "n_input_tokens": 8067944,
+      "n_cache_tokens": 7654016,
+      "n_output_tokens": 102800,
+      "n_agent_steps": null,
+      "source": "grok46-tb3-slash"
+    },
+    {
+      "status": "graded",
+      "task": "interleaved-vigenere",
+      "reward": 0,
+      "reward_raw": 0.0,
+      "n_input_tokens": 16473886,
+      "n_cache_tokens": 16233728,
+      "n_output_tokens": 45155,
+      "n_agent_steps": null,
+      "source": "grok46-tb3-slash"
+    },
+    {
+      "status": "graded",
+      "task": "intrastat-meldung",
+      "reward": 0,
+      "reward_raw": 0.0,
+      "n_input_tokens": 2386419,
+      "n_cache_tokens": 2024064,
+      "n_output_tokens": 31565,
+      "n_agent_steps": null,
+      "source": "grok46-tb3-slash"
+    },
+    {
+      "status": "graded",
+      "task": "kv-live-surgery",
+      "reward": 0,
+      "reward_raw": 0.0,
+      "n_input_tokens": 1553974,
+      "n_cache_tokens": 1445696,
+      "n_output_tokens": 34619,
+      "n_agent_steps": null,
+      "source": "grok46-tb3-slash"
+    },
+    {
+      "status": "graded",
+      "task": "layout-config-recreation",
+      "reward": 0,
+      "reward_raw": 0.0,
+      "n_input_tokens": 0,
+      "n_cache_tokens": 0,
+      "n_output_tokens": 0,
+      "n_agent_steps": null,
+      "source": "grok46-tb3-errors2"
+    },
+    {
+      "status": "graded",
+      "task": "layout-config-recreation2",
+      "reward": 1,
+      "reward_raw": 1.0,
+      "n_input_tokens": 9669270,
+      "n_cache_tokens": 9127168,
+      "n_output_tokens": 70883,
+      "n_agent_steps": null,
+      "source": "grok46-tb3-slash"
+    },
+    {
+      "status": "graded",
+      "task": "lean-midpoint-proof",
+      "reward": 0,
+      "reward_raw": 0.0,
+      "n_input_tokens": 39471059,
+      "n_cache_tokens": 39051520,
+      "n_output_tokens": 210904,
+      "n_agent_steps": null,
+      "source": "grok46-tb3-slash"
+    },
+    {
+      "status": "graded",
+      "task": "legacy-utility-triage",
+      "reward": 0,
+      "reward_raw": 0.0,
+      "n_input_tokens": 5597753,
+      "n_cache_tokens": 5266688,
+      "n_output_tokens": 44417,
+      "n_agent_steps": null,
+      "source": "grok46-tb3-slash"
+    },
+    {
+      "status": "graded",
+      "task": "live-database-cutover",
+      "reward": 0,
+      "reward_raw": 0.0,
+      "n_input_tokens": 5468580,
+      "n_cache_tokens": 5125248,
+      "n_output_tokens": 85834,
+      "n_agent_steps": null,
+      "source": "grok46-tb3-slash"
+    },
+    {
+      "status": "graded",
+      "task": "medical-claims-processing",
+      "reward": 0,
+      "reward_raw": 0.0,
+      "n_input_tokens": 0,
+      "n_cache_tokens": 0,
+      "n_output_tokens": 0,
+      "n_agent_steps": null,
+      "source": "grok46-tb3-errors"
+    },
+    {
+      "status": "graded",
+      "task": "memcached-backdoor",
+      "reward": 0,
+      "reward_raw": 0.0,
+      "n_input_tokens": 6503697,
+      "n_cache_tokens": 6096896,
+      "n_output_tokens": 36503,
+      "n_agent_steps": null,
+      "source": "grok46-tb3-slash"
+    },
+    {
+      "status": "graded",
+      "task": "mp-checkpoint-consolidation",
+      "reward": 1,
+      "reward_raw": 1.0,
+      "n_input_tokens": 8178161,
+      "n_cache_tokens": 7884288,
+      "n_output_tokens": 124318,
+      "n_agent_steps": null,
+      "source": "grok46-tb3-slash"
+    },
+    {
+      "status": "graded",
+      "task": "music-harmony",
+      "reward": 0,
+      "reward_raw": 0.0,
+      "n_input_tokens": 1173606,
+      "n_cache_tokens": 920192,
+      "n_output_tokens": 53354,
+      "n_agent_steps": null,
+      "source": "grok46-tb3-slash"
+    },
+    {
+      "status": "graded",
+      "task": "mvcc-lsm-compaction",
+      "reward": 0,
+      "reward_raw": 0.0,
+      "n_input_tokens": 185034,
+      "n_cache_tokens": 149888,
+      "n_output_tokens": 16049,
+      "n_agent_steps": null,
+      "source": "grok46-tb3-slash"
+    },
+    {
+      "status": "graded",
+      "task": "nextjs-performance",
+      "reward": 0,
+      "reward_raw": 0.0,
+      "n_input_tokens": 0,
+      "n_cache_tokens": 0,
+      "n_output_tokens": 0,
+      "n_agent_steps": null,
+      "source": "grok46-tb3-errors2"
+    },
+    {
+      "status": "graded",
+      "task": "ontology-kg-querying",
+      "reward": 0,
+      "reward_raw": 0.0,
+      "n_input_tokens": 3687637,
+      "n_cache_tokens": 3410944,
+      "n_output_tokens": 48682,
+      "n_agent_steps": null,
+      "source": "grok46-tb3-slash"
+    },
+    {
+      "status": "graded",
+      "task": "payments-pipeline-fix",
+      "reward": 0,
+      "reward_raw": 0.0,
+      "n_input_tokens": 3602567,
+      "n_cache_tokens": 3483456,
+      "n_output_tokens": 65001,
+      "n_agent_steps": null,
+      "source": "grok46-tb3-slash"
+    },
+    {
+      "status": "graded",
+      "task": "photonic-waveguide-routing",
+      "reward": 1,
+      "reward_raw": 1.0,
+      "n_input_tokens": 12208377,
+      "n_cache_tokens": 11635328,
+      "n_output_tokens": 286061,
+      "n_agent_steps": null,
+      "source": "grok46-tb3-slash"
+    },
+    {
+      "status": "graded",
+      "task": "pretrain-shard-corruption",
+      "reward": 0,
+      "reward_raw": 0.0,
+      "n_input_tokens": 13506835,
+      "n_cache_tokens": 12633344,
+      "n_output_tokens": 132570,
+      "n_agent_steps": null,
+      "source": "grok46-tb3-slash"
+    },
+    {
+      "status": "graded",
+      "task": "production-planning",
+      "reward": 0,
+      "reward_raw": 0.0,
+      "n_input_tokens": 4185676,
+      "n_cache_tokens": 4005504,
+      "n_output_tokens": 69779,
+      "n_agent_steps": null,
+      "source": "grok46-tb3-slash"
+    },
+    {
+      "status": "graded",
+      "task": "protein-autointerp-disulfide",
+      "reward": 0,
+      "reward_raw": 0.0,
+      "n_input_tokens": 1386264,
+      "n_cache_tokens": 1038976,
+      "n_output_tokens": 33738,
+      "n_agent_steps": null,
+      "source": "grok46-tb3-slash"
+    },
+    {
+      "status": "graded",
+      "task": "react-lead-form",
+      "reward": 1,
+      "reward_raw": 1.0,
+      "n_input_tokens": 1827169,
+      "n_cache_tokens": 1737984,
+      "n_output_tokens": 51195,
+      "n_agent_steps": null,
+      "source": "grok46-tb3-slash"
+    },
+    {
+      "status": "graded",
+      "task": "retro-console-soc",
+      "reward": 1,
+      "reward_raw": 1.0,
+      "n_input_tokens": 5716407,
+      "n_cache_tokens": 5361152,
+      "n_output_tokens": 114853,
+      "n_agent_steps": null,
+      "source": "grok46-tb3-slash"
+    },
+    {
+      "status": "graded",
+      "task": "risk-scorer-replay",
+      "reward": 0,
+      "reward_raw": 0.0,
+      "n_input_tokens": 20603094,
+      "n_cache_tokens": 19495168,
+      "n_output_tokens": 264999,
+      "n_agent_steps": null,
+      "source": "grok46-tb3-slash"
+    },
+    {
+      "status": "graded",
+      "task": "roy-polymorph-cn",
+      "reward": 0,
+      "reward_raw": 0.0,
+      "n_input_tokens": 377825,
+      "n_cache_tokens": 247808,
+      "n_output_tokens": 23335,
+      "n_agent_steps": null,
+      "source": "grok46-tb3-slash"
+    },
+    {
+      "status": "graded",
+      "task": "rs-archive-clone",
+      "reward": 0,
+      "reward_raw": 0.0,
+      "n_input_tokens": 9972182,
+      "n_cache_tokens": 9464192,
+      "n_output_tokens": 156056,
+      "n_agent_steps": null,
+      "source": "grok46-tb3-slash"
+    },
+    {
+      "status": "graded",
+      "task": "satb-audio-transcription",
+      "reward": 0,
+      "reward_raw": 0.0,
+      "n_input_tokens": 1576142,
+      "n_cache_tokens": 1365888,
+      "n_output_tokens": 50746,
+      "n_agent_steps": null,
+      "source": "grok46-tb3-slash"
+    },
+    {
+      "status": "graded",
+      "task": "session-window-debug",
+      "reward": 1,
+      "reward_raw": 1.0,
+      "n_input_tokens": 1428316,
+      "n_cache_tokens": 1148160,
+      "n_output_tokens": 61284,
+      "n_agent_steps": null,
+      "source": "grok46-tb3-slash"
+    },
+    {
+      "status": "graded",
+      "task": "sglang-qwen-burst",
+      "reward": 0,
+      "reward_raw": 0.0,
+      "n_input_tokens": 11574313,
+      "n_cache_tokens": 11074944,
+      "n_output_tokens": 76409,
+      "n_agent_steps": null,
+      "source": "grok46-tb3-slash"
+    },
+    {
+      "status": "graded",
+      "task": "shadow-relay",
+      "reward": 1,
+      "reward_raw": 1.0,
+      "n_input_tokens": 3058201,
+      "n_cache_tokens": 2563712,
+      "n_output_tokens": 67850,
+      "n_agent_steps": null,
+      "source": "grok46-tb3-slash"
+    },
+    {
+      "status": "graded",
+      "task": "sound-change-cascade",
+      "reward": 0,
+      "reward_raw": 0.0,
+      "n_input_tokens": 2751589,
+      "n_cache_tokens": 2412544,
+      "n_output_tokens": 123714,
+      "n_agent_steps": null,
+      "source": "grok46-tb3-slash"
+    },
+    {
+      "status": "graded",
+      "task": "takens-embedding-lean",
+      "reward": 0,
+      "reward_raw": 0.0,
+      "n_input_tokens": 14564126,
+      "n_cache_tokens": 14431488,
+      "n_output_tokens": 82360,
+      "n_agent_steps": null,
+      "source": "grok46-tb3-slash"
+    },
+    {
+      "status": "graded",
+      "task": "telecom-entity-resolution",
+      "reward": 0,
+      "reward_raw": 0.0,
+      "n_input_tokens": 7086331,
+      "n_cache_tokens": 6828416,
+      "n_output_tokens": 114079,
+      "n_agent_steps": null,
+      "source": "grok46-tb3-slash"
+    },
+    {
+      "status": "graded",
+      "task": "uefi-bootkit",
+      "reward": 1,
+      "reward_raw": 1.0,
+      "n_input_tokens": 6660343,
+      "n_cache_tokens": 5877504,
+      "n_output_tokens": 79269,
+      "n_agent_steps": null,
+      "source": "grok46-tb3-slash"
+    },
+    {
+      "status": "graded",
+      "task": "vba-userform-port",
+      "reward": 0,
+      "reward_raw": 0.0,
+      "n_input_tokens": 0,
+      "n_cache_tokens": 0,
+      "n_output_tokens": 0,
+      "n_agent_steps": null,
+      "source": "grok46-tb3-errors2"
+    },
+    {
+      "status": "graded",
+      "task": "vf2-speedup-networkx",
+      "reward": 0,
+      "reward_raw": 0.0,
+      "n_input_tokens": 7571385,
+      "n_cache_tokens": 7290624,
+      "n_output_tokens": 97566,
+      "n_agent_steps": null,
+      "source": "grok46-tb3-slash"
+    },
+    {
+      "status": "graded",
+      "task": "vllm-deepseek-streaming",
+      "reward": 0,
+      "reward_raw": 0.0,
+      "n_input_tokens": 11299223,
+      "n_cache_tokens": 10845568,
+      "n_output_tokens": 124269,
+      "n_agent_steps": null,
+      "source": "grok46-tb3-slash"
+    },
+    {
+      "status": "graded",
+      "task": "wal-recovery-ordering",
+      "reward": 1,
+      "reward_raw": 1.0,
+      "n_input_tokens": 641996,
+      "n_cache_tokens": 542848,
+      "n_output_tokens": 36231,
+      "n_agent_steps": null,
+      "source": "grok46-tb3-slash"
+    }
+  ],
+  "unresolved_infra": [
+    {
+      "task": "batched-eval-parity",
+      "exception": "Docker cannot honor network_mode=no-network",
+      "source": "environment"
+    },
+    {
+      "task": "cad-model",
+      "exception": "NonZeroAgentExitCodeError",
+      "source": "grok46-tb3-errors2"
+    },
+    {
+      "task": "cumulative-layout-shift",
+      "exception": "AgentTimeoutError",
+      "source": "grok46-tb3-slash"
+    },
+    {
+      "task": "ks-solver-cpp",
+      "exception": "NonZeroAgentExitCodeError",
+      "source": "grok46-tb3-errors2"
+    },
+    {
+      "task": "lake-temp-glm",
+      "exception": "NonZeroAgentExitCodeError",
+      "source": "grok46-tb3-errors2"
+    },
+    {
+      "task": "vpp-loss-divergence",
+      "exception": "NonZeroAgentExitCodeError",
+      "source": "grok46-tb3-errors"
+    },
+    {
+      "task": "wdm-design",
+      "exception": "RuntimeError",
+      "source": "grok46-tb3-errors2"
+    }
+  ],
+  "cost": {
+    "usd_per_task": 3.31,
+    "mean_fresh_tokens": 289219.7,
+    "mean_cache_tokens": 4627431.2,
+    "mean_output_tokens": 68902.9,
+    "pricing": {
+      "input_usd_per_mtok": 2.0,
+      "cached_input_usd_per_mtok": 0.5,
+      "output_usd_per_mtok": 6.0,
+      "source": "https://docs.x.ai/developers/pricing"
+    }
+  }
+}
