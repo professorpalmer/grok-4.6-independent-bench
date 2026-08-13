@@ -1,0 +1,19 @@
+{
+  "benchmarks": ["DeepSWE v1.1", "Terminal-Bench v3.0"],
+  "model": "Grok 4.6",
+  "date": "2026-08-12",
+  "claim_source": "https://x.ai/news/grok-4-6",
+  "deepswe": {
+    "claimed_pass_rate": 0.659,
+    "framework": "pier==0.3.1",
+    "environment": "docker",
+    "n_tasks": 113
+  },
+  "terminal_bench": {
+    "claimed_pass_rate": 0.26,
+    "dataset": "terminal-bench/terminal-bench@latest",
+    "framework": "harbor",
+    "environment": "docker",
+    "n_tasks": 74
+  }
+}
