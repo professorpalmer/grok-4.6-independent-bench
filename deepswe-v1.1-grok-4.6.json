@@ -1750,5 +1750,17 @@
       "task": "meriyah-explicit-resource-declarations",
       "exception": "EnvironmentStartTimeoutError"
     }
-  ]
+  ],
+  "cost": {
+    "usd_per_task": 3.94,
+    "mean_fresh_tokens": 223416.9,
+    "mean_cache_tokens": 6224824.4,
+    "mean_output_tokens": 63566.8,
+    "pricing": {
+      "input_usd_per_mtok": 2.0,
+      "cached_input_usd_per_mtok": 0.5,
+      "output_usd_per_mtok": 6.0,
+      "source": "https://docs.x.ai/developers/pricing"
+    }
+  }
 }
