@@ -21,6 +21,7 @@ OTHER = (92, 108, 96)
 IN_USD = 2.00
 CACHE_USD = 0.50
 OUT_USD = 6.00
+MODEL = "Grok 4.6 High"
 
 
 def font(size: int, bold: bool = False) -> ImageFont.FreeTypeFont:
@@ -120,7 +121,7 @@ def draw_pass(data: dict) -> None:
     d = ImageDraw.Draw(img)
     paint_header(d, "DEEPSWE v1.1", "Independent re-run")
     d.text((64, 168), fmt_pct(ours), font=font(112, bold=True), fill=INK)
-    d.text((64, 292), "Grok 4.6", font=font(28, bold=True), fill=LIME)
+    d.text((64, 292), MODEL, font=font(28, bold=True), fill=LIME)
     n_note = f"{n_pass}/{n} pass" + ("" if n == universe else f"  ·  {n} of {universe} graded")
     d.text((64, 338), n_note, font=font(16), fill=MUTED)
     d.line((64, 392, W - 64, 392), fill=RULE, width=1)
@@ -129,7 +130,7 @@ def draw_pass(data: dict) -> None:
         [
             ("GPT-5.6 Sol Max", 0.73, False),
             ("Fable 5 Max", 0.70, False),
-            ("Grok 4.6", ours, True),
+            (MODEL, ours, True),
             ("Grok 4.5 High", 0.54, False),
         ],
         fmt_pct,
@@ -137,9 +138,9 @@ def draw_pass(data: dict) -> None:
     )
     d.text(
         (64, H - 58),
-        "Grok 4.6 is this independent Pier/Docker run. "
+        f"{MODEL} is this independent Pier/Docker run. "
         "Other bars are Datacurve board scores (mini-swe-agent). "
-        "xAI card lists Grok 4.6 at 65.9%.",
+        "xAI card lists Grok 4.6 High at 65.9%.",
         font=font(15),
         fill=MUTED,
     )
@@ -157,7 +158,7 @@ def draw_cost(data: dict, cost: dict) -> None:
     d = ImageDraw.Draw(img)
     paint_header(d, "DEEPSWE v1.1", "Cost per task")
     d.text((64, 168), fmt_usd(ours), font=font(112, bold=True), fill=INK)
-    d.text((64, 292), "Grok 4.6", font=font(28, bold=True), fill=LIME)
+    d.text((64, 292), MODEL, font=font(28, bold=True), fill=LIME)
     d.text(
         (64, 338),
         f"{ratio:.1f}x Grok 4.5 High ({fmt_usd(baseline)})  ·  {out_ours:.0f}k vs 36k output tokens",
@@ -170,7 +171,7 @@ def draw_cost(data: dict, cost: dict) -> None:
         [
             ("Fable 5 Max", 21.63, False),
             ("GPT-5.6 Sol Max", 8.39, False),
-            ("Grok 4.6", ours, True),
+            (MODEL, ours, True),
             ("Grok 4.5 High", 2.42, False),
         ],
         fmt_usd,
@@ -178,8 +179,8 @@ def draw_cost(data: dict, cost: dict) -> None:
     )
     d.text(
         (64, H - 58),
-        "Grok 4.6 is xAI list on this run ($2 / $0.50 cache / $6 per MTok). "
-        "Other bars are Datacurve billed USD. Output tokens rose vs Grok 4.5.",
+        f"{MODEL} is xAI list on this run ($2 / $0.50 cache / $6 per MTok). "
+        "Other bars are Datacurve billed USD. Output tokens rose vs Grok 4.5 High.",
         font=font(15),
         fill=MUTED,
     )
@@ -190,6 +191,7 @@ def draw_cost(data: dict, cost: dict) -> None:
 
 def main() -> None:
     data = json.loads(JSON_PATH.read_text())
+    data["model"] = MODEL
     cost = our_cost(data)
     data["cost"] = cost
     JSON_PATH.write_text(json.dumps(data, indent=2) + "\n")

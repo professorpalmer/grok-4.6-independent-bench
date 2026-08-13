@@ -1,6 +1,6 @@
 {
   "benchmark": "DeepSWE v1.1",
-  "model": "Grok 4.6",
+  "model": "Grok 4.6 High",
   "date": "2026-08-12",
   "framework": "pier==0.3.1",
   "environment": "docker",

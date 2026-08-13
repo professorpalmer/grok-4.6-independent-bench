@@ -1,8 +1,8 @@
-# Grok 4.6 independent bench
+# Grok 4.6 High independent bench
 
-Independent DeepSWE v1.1 and Terminal-Bench v3.0 runs of **Grok 4.6**, checked against the [xAI 2026-08-12 card](https://x.ai/news/grok-4-6).
+Independent DeepSWE v1.1 and Terminal-Bench v3.0 runs of **Grok 4.6 High**, checked against the [xAI 2026-08-12 card](https://x.ai/news/grok-4-6). High is the effort level on that card; it is the only level used here.
 
-![DeepSWE v1.1 — Grok 4.6](deepswe-v1.1.png)
+![DeepSWE v1.1 — Grok 4.6 High](deepswe-v1.1.png)
 
 ![DeepSWE v1.1 — cost per task](deepswe-v1.1-cost.png)
 
@@ -16,10 +16,10 @@ Pass rate is not a cost win. At xAI list ($2 / $0.50 cache / $6 per MTok) this r
 | --- | ---: | ---: |
 | GPT-5.6 Sol Max | 73% | $8.39 |
 | Fable 5 Max | 70% | $21.63 |
-| Grok 4.6 (this run) | 65.5% | $3.94 (list, this run) |
+| Grok 4.6 High (this run) | 65.5% | $3.94 (list, this run) |
 | Grok 4.5 High | 54% | $2.42 |
 
-Comparator pass and USD rows are Datacurve board scores. Grok 4.6 is this Pier/Docker run on the 113-task set.
+Comparator pass and USD rows are Datacurve board scores. Grok 4.6 High is this Pier/Docker run on the 113-task set.
 
 ## Terminal-Bench v3.0
 

@@ -1,6 +1,6 @@
 {
   "benchmarks": ["DeepSWE v1.1", "Terminal-Bench v3.0"],
-  "model": "Grok 4.6",
+  "model": "Grok 4.6 High",
   "date": "2026-08-12",
   "claim_source": "https://x.ai/news/grok-4-6",
   "deepswe": {
